@@ -17,7 +17,7 @@ firewall-cmd --reload
 sed -i -e "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/" /etc/php.ini
 
 
- sed -i '/listen = 127.0.0.1:9000/a \listen = /var/run/php-fpm/php-fpm.sock' /etc/php-fpm.d/www.conf
+sed -i '/listen = 127.0.0.1:9000/a \listen = /var/run/php-fpm/php-fpm.sock' /etc/php-fpm.d/www.conf
 sed -i -e "s/;listen.owner = nobody/listen.owner = nginx/" /etc/php-fpm.d/www.conf
 sed -i -e "s/;listen.group = nobody/listen.group = nginx/" /etc/php-fpm.d/www.conf
 sed -i -e "s/user = apache/user = nginx/" /etc/php-fpm.d/www.conf
@@ -26,6 +26,7 @@ sed -i -e "s/group = apache/group = nginx/" /etc/php-fpm.d/www.conf
 wget https://wordpress.org/latest.tar.gz
 sudo tar -zxvf latest.tar.gz -C /usr/share/nginx/html
 mv /usr/share/nginx/html/wordpress/* /usr/share/nginx/html
+mv /root/wp-config.php /usr/share/nginx/html/
 sudo chown -R nginx:nginx /usr/share/nginx/html/
 sudo chmod -R 755 /usr/share/nginx/html/
 cp /root/default.conf /etc/nginx/conf.d/ 
