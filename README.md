@@ -1,8 +1,8 @@
 #  Wordpress on Centos 7 using Nginx
 
-Clone this to your loacl machine and then scp this to a fresh server using scp
+Clone this to your local machine and then scp this to a fresh Centos 7 server.
 
-Remember to set up limited users and properly secure.
+Remember to set up limited users and properly secure afterwards.
 
 You will need to setup the database here is an example:
 
