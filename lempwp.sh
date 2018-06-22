@@ -1,9 +1,9 @@
 echo mariadb database name?
-read $USER_DB_NAME
+read USER_DB_NAME
 echo mariadb username?
-read $USER_DB_USER
+read USER_DB_USER
 echo password?
-read -sp ':' $USER_DB_PASSWORD
+read -sp ':' USER_DB_PASSWORD
 
 yum update && yum upgrade -y
 yum -y install epel-release
