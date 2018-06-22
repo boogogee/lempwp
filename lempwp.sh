@@ -26,7 +26,7 @@ sed -i -e "s/group = apache/group = nginx/" /etc/php-fpm.d/www.conf
 wget https://wordpress.org/latest.tar.gz
 sudo tar -zxvf latest.tar.gz -C /usr/share/nginx/html
 mv /usr/share/nginx/html/wordpress/* /usr/share/nginx/html
-mv /root/wp-config.php /usr/share/nginx/html/
+#mv /root/wp-config.php /usr/share/nginx/html/
 sudo chown -R nginx:nginx /usr/share/nginx/html/
 sudo chmod -R 755 /usr/share/nginx/html/
 cp /root/default.conf /etc/nginx/conf.d/ 
